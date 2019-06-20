@@ -3,8 +3,7 @@
 Coding test by Lewis Coulson
 
 ## How to use
-You can create a new instance of the Live Order Board as shown below:
-`new LiveOrderBoard()`
+To create a new instance of the Live Order Board: `new LiveOrderBoard()`
 
 ## Methods
 - `registerOrder` - registers a new order
