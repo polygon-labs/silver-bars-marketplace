@@ -2,11 +2,11 @@
   "name": "silver-bars-marketplace",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "LiveOrderBoard.js",
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "author": "Lewis Coulson",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.4.4",

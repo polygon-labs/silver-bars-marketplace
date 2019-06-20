@@ -1,4 +1,4 @@
-import { isValidOrder } from './utils'
+import { isValidOrder, getSortedSummaryInformation } from './utils'
 
 export class LiveOrderBoard {
   constructor() {
@@ -7,6 +7,10 @@ export class LiveOrderBoard {
 
   getOrders() {
     return this.orders
+  }
+
+  getSummaryInformation() {
+    return getSortedSummaryInformation(this.orders)
   }
 
   registerOrder(order) {
