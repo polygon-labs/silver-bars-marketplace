@@ -1,53 +1,5 @@
-import { LiveOrderBoard } from './LiveOrderBoard'
-
-const order1 = {
-  userId: 'testUser1',
-  quantity: 100,
-  price: 500,
-  type: 'BUY'
-}
-
-const order2 = {
-  userId: 'testUser2',
-  quantity: 200,
-  price: 2500,
-  type: 'SELL'
-}
-
-const order3 = {
-  userId: 'testUser2',
-  quantity: 300,
-  price: 500,
-  type: 'BUY'
-}
-
-const order4 = {
-  userId: 'testUser3',
-  quantity: 1000,
-  price: 400,
-  type: 'BUY'
-}
-
-const order5 = {
-  userId: 'testUser1',
-  quantity: 700,
-  price: 900,
-  type: 'BUY'
-}
-
-const order6 = {
-  userId: 'testUser2',
-  quantity: 100,
-  price: 500,
-  type: 'SELL'
-}
-
-const order7 = {
-  userId: 'testUser1',
-  quantity: 50,
-  price: 5000,
-  type: 'SELL'
-}
+import { LiveOrderBoard } from '../LiveOrderBoard'
+import { order1, order2, order3, order4, order5, order6, order7 } from './constants'
 
 describe('LiveOrderBoard', () => {
   let liveOrderBoard
