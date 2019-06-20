@@ -1,6 +1,6 @@
 import { isValidOrder } from './utils'
 
-export class MarketPlace {
+export class LiveOrderBoard {
   constructor() {
     this.orders = []
   }

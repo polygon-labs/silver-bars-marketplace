@@ -1,4 +1,4 @@
-import { MarketPlace } from './MarketPlace'
+import { LiveOrderBoard } from './LiveOrderBoard'
 
 const order1 = {
   userId: 'testUser1',
@@ -14,41 +14,41 @@ const order2 = {
   type: 'SELL'
 }
 
-describe('MarketPlace', () => {
-  let marketPlace
+describe('LiveOrderBoard', () => {
+  let liveOrderBoard
 
   beforeEach(() => {
-    marketPlace = new MarketPlace()
+    liveOrderBoard = new LiveOrderBoard()
   })
 
   it('Should get orders', () => {
-    const orders = marketPlace.getOrders()
+    const orders = liveOrderBoard.getOrders()
     expect(orders).toEqual([]);
   })
 
   it('Should register orders', () => {
-    let orders = marketPlace.getOrders()
+    let orders = liveOrderBoard.getOrders()
     expect(orders).toEqual([]);
     
-    marketPlace.registerOrder(order1)
-    orders = marketPlace.getOrders()
+    liveOrderBoard.registerOrder(order1)
+    orders = liveOrderBoard.getOrders()
     expect(orders).toEqual([order1]);
 
-    marketPlace.registerOrder(order2)
-    orders = marketPlace.getOrders()
+    liveOrderBoard.registerOrder(order2)
+    orders = liveOrderBoard.getOrders()
     expect(orders).toEqual([order1, order2]);
   })
 
   it('Should cancel orders', () => {
-    let orders = marketPlace.getOrders()
+    let orders = liveOrderBoard.getOrders()
     expect(orders).toEqual([]);
     
-    marketPlace.registerOrder(order1)
-    marketPlace.registerOrder(order2)
-    orders = marketPlace.getOrders()
+    liveOrderBoard.registerOrder(order1)
+    liveOrderBoard.registerOrder(order2)
+    orders = liveOrderBoard.getOrders()
     expect(orders).toEqual([order1, order2]);
 
-    marketPlace.cancelOrder(order2)
+    liveOrderBoard.cancelOrder(order2)
     expect(orders).toEqual([order1]);
   })
 })
